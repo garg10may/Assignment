@@ -7,8 +7,17 @@ def createHTML(sortedItems):
     return text          
     
 
-def tagCloud(countDict):
+def tagCloud(wordFreq):
     
-    sortedItems = sorted( countDict.items())   
+    sortedItems = sorted( wordFreq.items())   
     return createHTML(sortedItems)
     
+
+if __name__ == '__main__':
+
+	from wordFreq import wordFreq
+	from modifiedWordFreq import modifiedWordFreq
+	countDict = wordFreq("abc.txt")
+	md = modifiedWordFreq( "noise.txt", countDict)
+
+	print tagCloud(md)

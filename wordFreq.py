@@ -12,3 +12,8 @@ def wordFreq(textFilePath):
             countDict[word] = countDict.get(word, 0) + 1
     
     return countDict
+
+
+if __name__ == '__main__':
+
+	print wordFreq("abc.txt")

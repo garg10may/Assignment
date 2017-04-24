@@ -38,9 +38,20 @@ def modBiGramWordFreq(noiseFilePath, biGramCountDict):
 
     return biGramCountDict
 
-from tagCloud import tagCloud, createHTML
-from linkedTagCloud import linkedTagCloud, findLines, createHTML2
 
+if __name__ == '__main__':
+
+    from tagCloud import tagCloud, createHTML
+    from linkedTagCloud import linkedTagCloud, findLines, createHTML2
+
+
+    print biGramWordFreq("abc.txt")
+    print 
+    print tagCloud(biGramWordFreq("abc.txt"))
+    print 
+    wordFreq = modBiGramWordFreq("noise.txt", biGramWordFreq("abc.txt"))
+    print linkedTagCloud(wordFreq, "abc.txt")
+    print 
 
 
 

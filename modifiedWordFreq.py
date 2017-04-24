@@ -1,4 +1,7 @@
 
+
+from wordFreq import wordFreq
+
 def modifiedWordFreq(noiseFilePath, countDict):
     
     noiseWordsFreq = wordFreq(noiseFilePath)
@@ -7,3 +10,9 @@ def modifiedWordFreq(noiseFilePath, countDict):
 
     return countDict
     
+
+
+if __name__ == '__main__':
+
+	countDict = wordFreq("abc.txt")
+	print modifiedWordFreq("noise.txt", countDict)
